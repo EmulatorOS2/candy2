@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <link href="crazygames-gameframe-v1.bundle.js" rel="preload" as="script">
-    <link href="/Build/Builds.loader.js" rel="preload" as="script">
+    <link href="Build/Builds.loader.js" rel="preload" as="script">
     <script type="text/javascript" src="crazygames-gameframe-v1.bundle.js" async=""></script>
     <script>
         var gameInstance = UnityLoader.instantiate("unityContainer", "Build/slope.json", { onProgress: UnityProgress, Module: { onRuntimeInitialized: function() { UnityProgress(gameInstance, "complete") } } });
