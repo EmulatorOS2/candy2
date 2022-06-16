@@ -31,16 +31,6 @@
   var SDK_READY = false;
   var GF_READY = false;
   var GF_LOAD_CALLED = false;
-  loadScript("crazygames-gameframe-v1.bundle.js", function() {
-      Crazygames.load(options).then(function() {
-        var pacmanWrapper = document.getElementById('pacman');
-        var pacmanStyles = document.getElementById('pacman-styles');
-  
-        if (pacmanWrapper && pacmanStyles) {
-          pacmanWrapper.remove();
-          pacmanStyles.remove();
-        }
-      });
-  });</script>
+  </script>
  
 </body>
