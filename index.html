@@ -9,61 +9,38 @@
         supports it.</noscript>
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
-    <script src="TemplateData/unityloader41.js"></script>
+    <link href="crazygames-gameframe-v1.bundle.js" rel="preload" as="script">
+    <link href="/Build/Builds.loader.js" rel="preload" as="script">
+    <script type="text/javascript" src="crazygames-gameframe-v1.bundle.js" async=""></script>
     <script>
         var gameInstance = UnityLoader.instantiate("unityContainer", "Build/slope.json", { onProgress: UnityProgress, Module: { onRuntimeInitialized: function() { UnityProgress(gameInstance, "complete") } } });
     </script>
 </head>
 <body>
-    <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px; padding: 0px; margin: 0px; border: 0px; position: relative; background: rgb(35, 31, 32);"><canvas id="#canvas" width="335" height="667" style="width: 100%; height: 100%; cursor: default;"></canvas><div class="logo Dark" style="display: none;"></div><div class="progress Dark" style="display: none;"><div class="empty" style="width: 0%;"></div><div class="full" style="width: 100%;"></div></div></div>
-
-<script src="97c35fd0-ea33-4844-a283-b7a4c6942643" id="c4174e706ac02e24f4101391e93a5db9"></script>
-         <script type="text/javascript">
-     //Declare variables for cloak here
-const local_title = localStorage.getItem("title");
-const local_icon = localStorage.getItem("icon");
-
-//If the window already has title stored in localstorage
-if (window.localStorage.hasOwnProperty("title")) {
-  document.title = local_title;
-}
-//Fetch and set from user's input
-if (window.localStorage.hasOwnProperty("icon")) {
-  document.querySelector("link[rel=icon]").href = local_icon;
-}
-
-//Add Google Analytics
-const gascript = document.createElement("script");
-gascript.setAttribute("async", "");
-gascript.setAttribute("src", "https://www.googletagmanager.com/gtag/js?id=G-NSZB9Q5L1N");
-const inlinegascript = document.createElement("script");
-inlinegascript.innerHTML = `window.dataLayer = window.dataLayer || []; 
-function gtag(){dataLayer.push(arguments);} 
-gtag('js', new Date()); 
-gtag('config', 'G-NSZB9Q5L1N');`
-document.head.append(gascript, inlinegascript);
-
-//Semantic - Major.Minor.Patch
-const sArr = [`1`, `4`, `0`];
-const version = "v" + sArr.join(".");
-
-//Fetch visit count
-const visitapi = "https://api.countapi.xyz/update/emulatoros.github.io/8f40b809-76a1-46fd-b76e-6cbd8827df44/?amount=1";
-fetch(visitapi)
-.then((res) => res.json())
-.then((res) => {
-  document.getElementById("visit-count").innerText = " " + parseInt(res.value).toLocaleString("en-US"); //Add commas
-});
-
-//Turn off GSAP null warnings (if present)
-try {
-  gsap.config({
-    nullTargetWarn: false,
-  });
-} catch {
-  //empty b/c no need for return
-}
-     </script>
+  <div class="preloadpacman" id="pacman"><div></div><div></div><div></div><div></div><div></div></div><script type="text/javascript">function loadScript(url, callback) {
+    var head = document.head;
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = url;
+    script.async = true;
+    script.onreadystatechange = callback;
+    script.onload = callback;
+    head.appendChild(script);
+  }
+  var options = {"loader":"unity2020","loaderOptions":{"showProgress":true,"unityLoaderUrl":"Build/Builds.loader.js","unityConfigOptions":{"codeUrl":"Build/Builds.wasm.br","dataUrl":"Build/Builds.data.br","frameworkUrl":"Build/Builds.framework.js.br"}},"author":"Coltroc","thumbnail":"https://images.crazygames.com/candy-clicker-2/20210712114344/candy-clicker-2-cover?auto=format,compress&q=75&cs=strip&w=360","gameName":"Candy Clicker 2","gameHttps":true,"gameSlug":"candy-clicker-2","gameId":"19476","gameStatus":"published","showAdOnExternal":"ALWAYS","showAdOnInternal":"DEFAULT","disableEmbedding":false,"dollarRate":0.9563493467655786,"upvotes":78692,"downvotes":9150,"releaseDate":"2021-07-08","locale":"en_US","controls":{"text":"<h3>Controls</h3>\n<p>Left mouse button</p>"},"videoThumbnail":"https://videos.crazygames.com/candy-clicker-2/2/candy-clicker-2-205x115.mp4","video":{"original":"https://videos.crazygames.com/candy-clicker-2/2/candy-clicker-2.mp4","sizes":[{"width":180,"height":111,"location":"https://videos.crazygames.com/candy-clicker-2/2/candy-clicker-2-180x111.mp4"},{"width":360,"height":222,"location":"https://videos.crazygames.com/candy-clicker-2/2/candy-clicker-2-360x222.mp4"},{"width":540,"height":333,"location":"https://videos.crazygames.com/candy-clicker-2/2/candy-clicker-2-540x333.mp4"},{"width":720,"height":444,"location":"https://videos.crazygames.com/candy-clicker-2/2/candy-clicker-2-720x444.mp4"},{"width":205,"height":115,"location":"https://videos.crazygames.com/candy-clicker-2/2/candy-clicker-2-205x115.mp4"},{"width":249,"height":140,"location":"https://videos.crazygames.com/candy-clicker-2/2/candy-clicker-2-249x140.mp4"},{"width":364,"height":208,"location":"https://videos.crazygames.com/candy-clicker-2/2/candy-clicker-2-364x208.mp4"},{"width":494,"height":276,"location":"https://videos.crazygames.com/candy-clicker-2/2/candy-clicker-2-494x276.mp4"},{"width":611,"height":343,"location":"https://videos.crazygames.com/candy-clicker-2/2/candy-clicker-2-611x343.mp4"}]},"sandbox":true,"totalSize":"11 MB","minTimeBetweenMidrollAdsInMs":180000,"minTimeBetweenRewardedAdsInMs":5000,"noMidrollAdInFirstMinutes":3,"noRewardedAdInFirstMinutes":0,"categoryEnSlug":"clicker","tagsEnSlugs":["webgl","cartoon","candy","incremental","mouse","collect","upgrade","idle"],"isKids":false,"hasMidroll":false,"hasRewarded":true,"fullscreen":"SUPPORTED","category":"Candy Crush","categoryLink":"https://www.crazygames.com/t/candy","gameLink":"https://www.crazygames.com/game/candy-clicker-2","alternativeGames":[{"category":"Clicker","gameSlug":"candy-clicker","gameName":"Candy Clicker","rating":8.6,"thumbnail":"https://images.crazygames.com/games/candy-clicker/cover-1625755118464.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/candy-clicker/1/candy-clicker-205x115.mp4","gameLink":"https://www.crazygames.com/game/candy-clicker","loader":"iframe"},{"category":"Clicker","gameSlug":"planet-clicker-2","gameName":"Planet Clicker 2","rating":9.1,"thumbnail":"https://images.crazygames.com/planet-clicker-2/20220125105239/planet-clicker-2-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/planet-clicker-2/2/planet-clicker-2-205x115.mp4","gameLink":"https://www.crazygames.com/game/planet-clicker-2","loader":"unity2020"},{"category":"Clicker","gameSlug":"planet-clicker","gameName":"Planet Clicker","rating":8.9,"thumbnail":"https://images.crazygames.com/games/planet-clicker/cover-1636710259992.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/planet-clicker/2/planet-clicker-205x115.mp4","gameLink":"https://www.crazygames.com/game/planet-clicker","loader":"iframe"},{"category":"Clicker","gameSlug":"idlegun","gameName":"Idle Gun","rating":9.1,"thumbnail":"https://images.crazygames.com/idlegun/20220420165343/idlegun-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/idlegun/3/idlegun-205x115.mp4","gameLink":"https://www.crazygames.com/game/idlegun","loader":"unity2021"},{"category":"Clicker","gameSlug":"idle-defence","gameName":"Idle Defense","rating":9.1,"thumbnail":"https://images.crazygames.com/idle-defence/20220527120003/idle-defence-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/idle-defence/1/idle-defence-205x115.mp4","gameLink":"https://www.crazygames.com/game/idle-defence","loader":"unity2021"},{"category":"Clicker","gameSlug":"magic-swords-idle-rpg","gameName":"Magic Swords Idle RPG","rating":9.2,"thumbnail":"https://images.crazygames.com/magic-swords-idle-rpg/20220422175940/magic-swords-idle-rpg-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/magic-swords-idle-rpg/1/magic-swords-idle-rpg-205x115.mp4","gameLink":"https://www.crazygames.com/game/magic-swords-idle-rpg","loader":"iframe"},{"category":"Clicker","gameSlug":"doge-miner-2","gameName":"Doge Miner 2","rating":9.2,"thumbnail":"https://images.crazygames.com/games/doge-miner-2/cover-1593443163888.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/doge-miner-2/1/doge-miner-2-205x115.mp4","gameLink":"https://www.crazygames.com/game/doge-miner-2","loader":"iframe"},{"category":"Clicker","gameSlug":"weaponsmith-idle","gameName":"Weaponsmith Idle","rating":9.3,"thumbnail":"https://images.crazygames.com/weaponsmith-idle/20220201085740/weaponsmith-idle-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/weaponsmith-idle/1/weaponsmith-idle-205x115.mp4","gameLink":"https://www.crazygames.com/game/weaponsmith-idle","loader":"unity2020"},{"category":"Clicker","gameSlug":"room-clicker","gameName":"Room Clicker","rating":9,"thumbnail":"https://images.crazygames.com/room-clicker.png?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/room-clicker/1/room-clicker-205x115.mp4","gameLink":"https://www.crazygames.com/game/room-clicker","loader":"iframe"},{"category":"Clicker","gameSlug":"mining-rush","gameName":"Mining Rush","rating":9.2,"thumbnail":"https://images.crazygames.com/mining-rush/20220610150730/mining-rush-cover?auto=format,compress&q=75&cs=strip&w=360","videoThumbnail":"https://videos.crazygames.com/mining-rush/1/mining-rush-thumbnail.mp4","gameLink":"https://www.crazygames.com/game/mining-rush","loader":"iframe"}],"domainHasNoCMP":false};
+  var SDK_READY = false;
+  var GF_READY = false;
+  var GF_LOAD_CALLED = false;
+  loadScript("crazygames-gameframe-v1.bundle.js", function() {
+      Crazygames.load(options).then(function() {
+        var pacmanWrapper = document.getElementById('pacman');
+        var pacmanStyles = document.getElementById('pacman-styles');
+  
+        if (pacmanWrapper && pacmanStyles) {
+          pacmanWrapper.remove();
+          pacmanStyles.remove();
+        }
+      });
+  });</script>
  
 </body>
